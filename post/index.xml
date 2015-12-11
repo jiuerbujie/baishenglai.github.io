@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Baisheng Lai&#39;s Homepage</title>
+    <link>http://jiuerbujie.github.io/post/</link>
+    <description>Recent content in Posts on Baisheng Lai&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>laibaisheng@gmail.com (Baisheng Lai)</managingEditor>
+    <webMaster>laibaisheng@gmail.com (Baisheng Lai)</webMaster>
+    <atom:link href="http://jiuerbujie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://jiuerbujie.github.io/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
+      <guid>http://jiuerbujie.github.io/1/01/01/</guid>
+      <description>
+
+&lt;h2 id=&#34;test-latex:c5c7eca0328ebc731e803886691e9d2d&#34;&gt;test latex&lt;/h2&gt;
+
+&lt;p&gt;An equation:
+&lt;code&gt;$$E = mc^2$$&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
