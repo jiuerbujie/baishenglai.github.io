@@ -8,68 +8,7 @@
     <language>en-us</language>
     <managingEditor>laibaisheng@gmail.com (Baisheng Lai)</managingEditor>
     <webMaster>laibaisheng@gmail.com (Baisheng Lai)</webMaster>
-    <lastBuildDate>Fri, 11 Dec 2015 18:46:30 +0800</lastBuildDate>
     <atom:link href="http://jiuerbujie.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>用cmake管理多版本的OpenCV</title>
-      <link>http://jiuerbujie.github.io/2015/12/11/%E7%94%A8cmake%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%AC%E7%9A%84opencv/</link>
-      <pubDate>Fri, 11 Dec 2015 18:46:30 +0800</pubDate>
-      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
-      <guid>http://jiuerbujie.github.io/2015/12/11/%E7%94%A8cmake%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%AC%E7%9A%84opencv/</guid>
-      <description>
-
-&lt;h1 id=&#34;简介:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;简介&lt;/h1&gt;
-
-&lt;p&gt;本问介绍如何利用cmake方便地管理多个版本的OpenCV，并且在实际项目中灵活地选用需要的版本。&lt;/p&gt;
-
-&lt;h1 id=&#34;目录变量:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;目录变量&lt;/h1&gt;
-
-&lt;p&gt;为了叙述方便，定义三个变量，&lt;code&gt;$OpenCV_SRCDIR&lt;/code&gt;为OpenCV源代码下载位置，&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;为OpenCV编译的目标位置，&lt;code&gt;OpenCV_INSTALLDIR&lt;/code&gt;为安装OpenCV的位置。&lt;/p&gt;
-
-&lt;h1 id=&#34;编译opencv:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;编译OpenCV&lt;/h1&gt;
-
-&lt;p&gt;首先，到OpenCV&lt;a href=&#34;opencv.org&#34;&gt;官网&lt;/a&gt;下载多个版本的OpenCV源代码，如下载&lt;code&gt;opencv-3.0.0.zip&lt;/code&gt;与&lt;code&gt;opencv-2.4.10.zip&lt;/code&gt;到目录&lt;code&gt;$OpenCV_SRCDIR&lt;/code&gt;，分别解压。
-接下来，对两个版本的OpenCV使用cmake进行编译。进入&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;文件夹，输入命令:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cmake $OpenCV_SRCDIR -D CMAKE_BUILD_TYPE=RELEASE CMAKE_INSTALL_PREFIX=$OpenCV_INSTALLDIR
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;完成后输入&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;make
-make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可在&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;中看到如下文件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;|
-|--OpenCVConfig.cmake
-|--OpenCVConfig-version.cmake
-|--OpenCVModules.cmake
-|--...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;并在&lt;code&gt;$OpenCV_INSTALLDIR&lt;/code&gt;中看到如下文件夹&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;|--bin\
-|--include\
-|--lib\
-|--share\
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;为项目创建cmakelists-txt:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;为项目创建CMakeLists.txt&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>http://jiuerbujie.github.io/about/about/</link>
-      <pubDate>Sun, 25 Oct 2015 08:36:54 -0700</pubDate>
-      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
-      <guid>http://jiuerbujie.github.io/about/about/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
