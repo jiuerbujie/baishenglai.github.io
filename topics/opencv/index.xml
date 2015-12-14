@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Baisheng Lai&#39;s Homepage</title>
-    <link>http://jiuerbujie.github.io/</link>
-    <description>Recent content on Baisheng Lai&#39;s Homepage</description>
+    <title>Opencv on Baisheng Lai&#39;s Homepage</title>
+    <link>http://jiuerbujie.github.io/topics/opencv/</link>
+    <description>Recent content in Opencv on Baisheng Lai&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>laibaisheng@gmail.com (Baisheng Lai)</managingEditor>
     <webMaster>laibaisheng@gmail.com (Baisheng Lai)</webMaster>
     <lastBuildDate>Fri, 11 Dec 2015 18:46:30 +0800</lastBuildDate>
-    <atom:link href="http://jiuerbujie.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jiuerbujie.github.io/topics/opencv/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>用cmake管理多版本的OpenCV</title>
@@ -60,15 +60,6 @@ make install
 
 &lt;h1 id=&#34;为项目创建cmakelists-txt:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;为项目创建CMakeLists.txt&lt;/h1&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>http://jiuerbujie.github.io/about/about/</link>
-      <pubDate>Sun, 25 Oct 2015 08:36:54 -0700</pubDate>
-      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
-      <guid>http://jiuerbujie.github.io/about/about/</guid>
-      <description></description>
     </item>
     
   </channel>

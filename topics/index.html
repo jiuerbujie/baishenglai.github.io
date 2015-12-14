@@ -84,8 +84,6 @@
 
 <a href="http://jiuerbujie.github.io/post" title="Show list of posts">Posts</a>
 
-<a href="http://jiuerbujie.github.io/post_zh_CN" title="Show list of posts">中文博客</a>
-
 <a href="http://jiuerbujie.github.io/tags" title="Show list of tags">Tags</a>
 
 
@@ -133,6 +131,19 @@
   </header>
   
   
+  
+  <article class="container">
+    <h2>
+      <a href="http://jiuerbujie.github.io/topics/opencv">opencv</a>
+    </h2>
+    <ul>
+      
+      <li>
+        <a href="http://jiuerbujie.github.io/2015/12/11/%E7%94%A8cmake%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%AC%E7%9A%84opencv/">用cmake管理多版本的OpenCV</a>
+      </li>
+      
+    </ul>
+  </article>
   
 </section>
       <footer id="main-footer" class="container main_footer">
@@ -182,7 +193,36 @@
 </script>
 
 
+    <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
     
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
   </body>
 </html>
 
