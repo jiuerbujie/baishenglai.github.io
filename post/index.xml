@@ -8,57 +8,102 @@
     <language>en-us</language>
     <managingEditor>laibaisheng@gmail.com (Baisheng Lai)</managingEditor>
     <webMaster>laibaisheng@gmail.com (Baisheng Lai)</webMaster>
-    <lastBuildDate>Fri, 11 Dec 2015 18:46:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Dec 2015 16:01:45 +0800</lastBuildDate>
     <atom:link href="http://jiuerbujie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>用cmake管理多版本的OpenCV</title>
-      <link>http://jiuerbujie.github.io/2015/12/11/%E7%94%A8cmake%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%AC%E7%9A%84opencv/</link>
-      <pubDate>Fri, 11 Dec 2015 18:46:30 +0800</pubDate>
+      <title>Notes of  matplotlib</title>
+      <link>http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/</link>
+      <pubDate>Sun, 13 Dec 2015 16:01:45 +0800</pubDate>
       <author>laibaisheng@gmail.com (Baisheng Lai)</author>
-      <guid>http://jiuerbujie.github.io/2015/12/11/%E7%94%A8cmake%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%AC%E7%9A%84opencv/</guid>
+      <guid>http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/</guid>
       <description>
 
-&lt;h1 id=&#34;简介:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Here are some notes of matplotlib that are useful. It includes the basic usage that I have ever experisenced.&lt;/p&gt;
 
-&lt;p&gt;本问介绍如何利用cmake方便地管理多个版本的OpenCV，并且在实际项目中灵活地选用需要的版本。&lt;/p&gt;
+&lt;h3 id=&#34;plot-curve&#34;&gt;plot curve&lt;/h3&gt;
 
-&lt;h1 id=&#34;目录变量:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;目录变量&lt;/h1&gt;
-
-&lt;p&gt;为了叙述方便，定义三个变量，&lt;code&gt;$OpenCV_SRCDIR&lt;/code&gt;为OpenCV源代码下载位置，&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;为OpenCV编译的目标位置，&lt;code&gt;OpenCV_INSTALLDIR&lt;/code&gt;为安装OpenCV的位置。&lt;/p&gt;
-
-&lt;h1 id=&#34;编译opencv:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;编译OpenCV&lt;/h1&gt;
-
-&lt;p&gt;首先，到OpenCV&lt;a href=&#34;opencv.org&#34;&gt;官网&lt;/a&gt;下载多个版本的OpenCV源代码，如下载&lt;code&gt;opencv-3.0.0.zip&lt;/code&gt;与&lt;code&gt;opencv-2.4.10.zip&lt;/code&gt;到目录&lt;code&gt;$OpenCV_SRCDIR&lt;/code&gt;，分别解压。
-接下来，对两个版本的OpenCV使用cmake进行编译。进入&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;文件夹，输入命令:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cmake $OpenCV_SRCDIR -D CMAKE_BUILD_TYPE=RELEASE CMAKE_INSTALL_PREFIX=$OpenCV_INSTALLDIR
+&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0,1,0.1)
+y = np.sin(x)
+plt.figure()
+plt.plot(x, y)
+plt.show()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;完成后输入&lt;/p&gt;
+&lt;h3 id=&#34;set-line-properties&#34;&gt;set line properties&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;make
-make install
+&lt;p&gt;Use &lt;code&gt;help(plt.plot)&lt;/code&gt; to see what properties are supported, in fact, these properties are very similar to MATLAB, like &amp;laquo;linewidth&amp;raquo;, markers and colors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plt.plot(x, y, linewidth = 3)
+plt.plot(x,y,&#39;r+&#39;, markersize = 5)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;可在&lt;code&gt;$OpenCV_BUILDDIR&lt;/code&gt;中看到如下文件&lt;/p&gt;
+&lt;h3 id=&#34;title-and-text&#34;&gt;title and text&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;|
-|--OpenCVConfig.cmake
-|--OpenCVConfig-version.cmake
-|--OpenCVModules.cmake
-|--...
+&lt;p&gt;One can give title for each plot or subplot, for example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plt.plot(x,y)
+plt.title(&#39;sin function&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;并在&lt;code&gt;$OpenCV_INSTALLDIR&lt;/code&gt;中看到如下文件夹&lt;/p&gt;
+&lt;p&gt;Sometimes, one need to insert a text one figure to indicate some concept(expecially to indicate a point). Note, a coordinate must be assigned.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;|--bin\
-|--include\
-|--lib\
-|--share\
+&lt;pre&gt;&lt;code&gt;plt.plot(x,y)
+plt.text(1, 1, &#39;a point&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>统计学习方法——感知机</title>
+      <link>http://jiuerbujie.github.io/2015/12/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%84%9F%E7%9F%A5%E6%9C%BA/</link>
+      <pubDate>Sun, 13 Dec 2015 15:17:46 +0800</pubDate>
+      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
+      <guid>http://jiuerbujie.github.io/2015/12/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%84%9F%E7%9F%A5%E6%9C%BA/</guid>
+      <description>
 
-&lt;h1 id=&#34;为项目创建cmakelists-txt:6e384f67d9423ee1cf88744df5c32a83&#34;&gt;为项目创建CMakeLists.txt&lt;/h1&gt;
+&lt;h2 id=&#34;简介:c939f3b67beba609d4eba15a11f7e436&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;本文介绍《统计学习方法》中的感知机的原理及实现。&lt;/p&gt;
+
+&lt;h2 id=&#34;线性模型的分类器:c939f3b67beba609d4eba15a11f7e436&#34;&gt;线性模型的分类器&lt;/h2&gt;
+
+&lt;p&gt;形如&lt;code&gt;$f(x) = sign(w^T x+b)$&lt;/code&gt;的模型称为线性模型，其中&lt;code&gt;$x\in \mathcal{R}^n$&lt;/code&gt;是数据，&lt;code&gt;$w$&lt;/code&gt;和&lt;code&gt;$b$&lt;/code&gt;为模型的参数，即模型的响应为线性作用的结果，响应大于0则为正实例（label=1），响应小与零则为负实例（label=-1）。&lt;/p&gt;
+
+&lt;p&gt;线性模型的目标是对于线性可分的训练集，找到一个超平面&lt;code&gt;$w^T x +b = 0$&lt;/code&gt;，使得对于正实例&lt;code&gt;$x_{+}$&lt;/code&gt;来说，&lt;code&gt;$w^T x_{+} + b &amp;gt; 0$&lt;/code&gt;，相反，对于负实例&lt;code&gt;$x_{-}$&lt;/code&gt;来说,&lt;code&gt;$w^T x_{-} + b &amp;lt; 0$&lt;/code&gt;。这样，得到的超平面可以对训练数据进行二类的划分。一个线性可分的训练集的例子如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://jiuerbujie.github.io/images/linearDisData.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中，&lt;code&gt;x1&lt;/code&gt;和&lt;code&gt;x2&lt;/code&gt;是正样本，&lt;code&gt;x3&lt;/code&gt;是负样本。&lt;/p&gt;
+
+&lt;h2 id=&#34;感知机原理:c939f3b67beba609d4eba15a11f7e436&#34;&gt;感知机原理&lt;/h2&gt;
+
+&lt;p&gt;感知机属于纯粹的线性模型，它也需要寻找一个上述的超平面。一个问题是：如何来评判一个超平面的好坏呢？
+感知机使用&lt;strong&gt;错误分类的点离超平面的距离之和&lt;/strong&gt;来评判一个超平面的好坏。我们可以从两个层面来解释：首先，如果所有点都被正确划分，那么这个距离等于0，即是最小的；当有错误分类的数据时，超平面离错误分类的点越近越好，这容易理解，因为超平面离错误分类的点越近，在下一次迭代中，更有可能移动到错误分类的点的另一侧，即把它分类正确。
+我们知道，某个点&lt;code&gt;$x_0$&lt;/code&gt;离超平面&lt;code&gt;$w^T x + b = 0$&lt;/code&gt;的距离为：
+&lt;code&gt;$$\frac{1}{\|w\|}|w^T x_0 + b|$$&lt;/code&gt;
+并且，对于错误分类的点&lt;code&gt;$x_e$&lt;/code&gt;，记它的分类器输出为&lt;code&gt;$y_e\in \{-1,1\}$&lt;/code&gt;，总有&lt;code&gt;$y_e(w^T x_e + b) &amp;lt; 0$&lt;/code&gt;，因此，对于误分类的点，它到超平面的距离可以记为：
+&lt;code&gt;$$-\frac{1}{\|w\|} y_e (w^T x_e + b)$$&lt;/code&gt;
+值得注意的是，&lt;code&gt;$w$&lt;/code&gt;和&lt;code&gt;$b$&lt;/code&gt;的尺度并不影响最终的结果，因为&lt;code&gt;$x^T w + b=0$&lt;/code&gt;和&lt;code&gt;$x^T (\alpha w) + (\alpha b) = 0$&lt;/code&gt;是同一个平面，所以，我们可以将上式的&lt;code&gt;$\|w\|$&lt;/code&gt;去掉。将所有的误分类的点到超平面的距离相加，我们可以得到感知机的优化目标函数
+&lt;code&gt;$$\{w,b\} = \arg\min_{w,b} \sum_{j \in \mathcal{\{E\}}} - y_j (w^T x_j + b)$$&lt;/code&gt;
+其中集合&lt;code&gt;$\mathcal{\{E\}}$&lt;/code&gt;是所有误分类的数据下标。&lt;/p&gt;
+
+&lt;h2 id=&#34;感知机的求解:c939f3b67beba609d4eba15a11f7e436&#34;&gt;感知机的求解&lt;/h2&gt;
+
+&lt;p&gt;可以使用梯度下降或者随机梯度下降法来求解感知机的优化问题，它们的关键都在于求解目标函数对于&lt;code&gt;$w$&lt;/code&gt;和&lt;code&gt;$b$&lt;/code&gt;的梯度，记某个数据的目标函数为&lt;code&gt;$J_j(w, b) = -y_j(w^T x_j + b)$&lt;/code&gt;，它关于&lt;code&gt;$w$&lt;/code&gt;和&lt;code&gt;$b$&lt;/code&gt;的梯度分别为：
+&lt;code&gt;$$\frac{\partial J_j(w, b)}{\partial w} = -y_j x_j$$&lt;/code&gt;
+&lt;code&gt;$$\frac{\partial J_j(w, b)}{\partial b} = -y_j$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;对于梯度下降，它的更新利用了整个目标函数的梯度，更新方式为：
+&lt;code&gt;$$w \leftarrow w + \sum_{j \in \mathcal{\{E\}}} \eta y_j x_j$$&lt;/code&gt;
+&lt;code&gt;$$b \leftarrow b + \sum_{j \in \mathcal{\{E\}}} \eta y_j$$&lt;/code&gt;
+其中&lt;code&gt;$\eta$&lt;/code&gt;是learning rate。&lt;/p&gt;
+
+&lt;p&gt;而对于随机梯度下降，它的更新只利用了一个误分类的点，更新方式为：
+&lt;code&gt;$$w \leftarrow w + \eta y_j x_j$$&lt;/code&gt;
+&lt;code&gt;$$b \leftarrow b + \eta y_j$$&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
     

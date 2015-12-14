@@ -5,31 +5,55 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; Baisheng Lai&#39;s Homepage</title>
+  <title>Notes of  matplotlib  &middot; Baisheng Lai&#39;s Homepage</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="some notes of matplotlib" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="matplotlib, ">
 
 
-<meta property="og:title" content="Tags  &middot; Baisheng Lai&#39;s Homepage ">
+<meta property="og:title" content="Notes of  matplotlib  &middot; Baisheng Lai&#39;s Homepage ">
 <meta property="og:site_name" content="Baisheng Lai&#39;s Homepage"/>
-<meta property="og:url" content="http://jiuerbujie.github.io/tags/" />
+<meta property="og:url" content="http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="some notes of matplotlib"/>
+<meta property="og:article:published_time" content="2015-12-13T16:01:45&#43;08:00" />
+<meta property="og:article:modified_time" content="2015-12-13T16:01:45&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="matplotlib">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Notes of  matplotlib",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2015-12-13",
+    "description": "some notes of matplotlib",
+    "wordCount":  118 
+  }
+</script>
 
 
 
-<link href="http://jiuerbujie.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
-
-<link rel="canonical" href="http://jiuerbujie.github.io/tags/" />
+<link rel="canonical" href="http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://jiuerbujie.github.io/touch-icon-144-precomposed.png">
 <link href="http://jiuerbujie.github.io/favicon.png" rel="icon">
@@ -123,35 +147,98 @@
 </header>
 
 
-<article id="main-content" class="container main_content terms">
-  <header class="container">
-    <h1>Tags
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Notes of  matplotlib
 </h1>
 
-  </header>
-  <ul class="container content">
+  <div class="metas">
+<time datetime="2015-12-13">13 Dec, 2015</time>
+
+
+  
+    &middot; by Baisheng Lai
+  
+  &middot; Read in about 1 min
+  &middot; (118 Words)
+  <br>
+  
+<a class="label" href="http://jiuerbujie.github.io/tags/matplotlib">matplotlib</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<p>Here are some notes of matplotlib that are useful. It includes the basic usage that I have ever experisenced.</p>
+
+<h3 id="plot-curve">plot curve</h3>
+
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0,1,0.1)
+y = np.sin(x)
+plt.figure()
+plt.plot(x, y)
+plt.show()
+</code></pre>
+
+<h3 id="set-line-properties">set line properties</h3>
+
+<p>Use <code>help(plt.plot)</code> to see what properties are supported, in fact, these properties are very similar to MATLAB, like &laquo;linewidth&raquo;, markers and colors.</p>
+
+<pre><code>plt.plot(x, y, linewidth = 3)
+plt.plot(x,y,'r+', markersize = 5)
+</code></pre>
+
+<h3 id="title-and-text">title and text</h3>
+
+<p>One can give title for each plot or subplot, for example</p>
+
+<pre><code>plt.plot(x,y)
+plt.title('sin function')
+</code></pre>
+
+<p>Sometimes, one need to insert a text one figure to indicate some concept(expecially to indicate a point). Note, a coordinate must be assigned.</p>
+
+<pre><code>plt.plot(x,y)
+plt.text(1, 1, 'a point')
+</code></pre>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
   
   
+
+    
+    <a class="prev" href="http://jiuerbujie.github.io/2015/12/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%84%9F%E7%9F%A5%E6%9C%BA/" title="统计学习方法——感知机">
+      Previous
+    </a>
+    
+
+    
+
   
-    <li>
-      <a href="http://jiuerbujie.github.io/tags/matplotlib">
-        matplotlib
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
   
-    <li>
-      <a href="http://jiuerbujie.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95">
-        统计学习方法
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+</div>
+
+</footer>
+
 </article>
       <footer id="main-footer" class="container main_footer">
   

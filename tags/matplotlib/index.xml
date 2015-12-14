@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matplotlib on Baisheng Lai&#39;s Homepage</title>
+    <link>http://jiuerbujie.github.io/tags/matplotlib/</link>
+    <description>Recent content in Matplotlib on Baisheng Lai&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>laibaisheng@gmail.com (Baisheng Lai)</managingEditor>
+    <webMaster>laibaisheng@gmail.com (Baisheng Lai)</webMaster>
+    <lastBuildDate>Sun, 13 Dec 2015 16:01:45 +0800</lastBuildDate>
+    <atom:link href="http://jiuerbujie.github.io/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Notes of  matplotlib</title>
+      <link>http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/</link>
+      <pubDate>Sun, 13 Dec 2015 16:01:45 +0800</pubDate>
+      <author>laibaisheng@gmail.com (Baisheng Lai)</author>
+      <guid>http://jiuerbujie.github.io/2015/12/13/notes-of--matplotlib/</guid>
+      <description>
+
+&lt;p&gt;Here are some notes of matplotlib that are useful. It includes the basic usage that I have ever experisenced.&lt;/p&gt;
+
+&lt;h3 id=&#34;plot-curve&#34;&gt;plot curve&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0,1,0.1)
+y = np.sin(x)
+plt.figure()
+plt.plot(x, y)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;set-line-properties&#34;&gt;set line properties&lt;/h3&gt;
+
+&lt;p&gt;Use &lt;code&gt;help(plt.plot)&lt;/code&gt; to see what properties are supported, in fact, these properties are very similar to MATLAB, like &amp;laquo;linewidth&amp;raquo;, markers and colors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plt.plot(x, y, linewidth = 3)
+plt.plot(x,y,&#39;r+&#39;, markersize = 5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;title-and-text&#34;&gt;title and text&lt;/h3&gt;
+
+&lt;p&gt;One can give title for each plot or subplot, for example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plt.plot(x,y)
+plt.title(&#39;sin function&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sometimes, one need to insert a text one figure to indicate some concept(expecially to indicate a point). Note, a coordinate must be assigned.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plt.plot(x,y)
+plt.text(1, 1, &#39;a point&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
